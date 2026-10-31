@@ -11,7 +11,7 @@ import {
   useMap,
 } from "react-leaflet";
 
-const API = "http://localhost:5000/api";
+const API = `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api`;
 
 // PERSISTENCE FIX: Store only the latest emergency ID in this browser.
 const STORAGE_KEY = "mediroute_last_request_id";

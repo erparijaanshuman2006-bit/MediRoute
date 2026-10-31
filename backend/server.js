@@ -5,7 +5,7 @@ const pool = require("./db");
 const { evaluateTriage } = require("./triage");
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 // Demo GPS simulation
 const ENABLE_DEMO_GPS = process.env.ENABLE_DEMO_GPS === "true";
